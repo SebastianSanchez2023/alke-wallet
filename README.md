@@ -96,7 +96,7 @@ git branch feature/transacciones
 git branch feature/depositos
 
 # 4. Vincular con tu repositorio en GitHub
-git remote add origin https://github.com/TU-USUARIO/alke-wallet.git
+git remote add origin https://github.com/SebastianSanchez2023/alke-wallet.git
 git branch -M main
 git push -u origin main
 

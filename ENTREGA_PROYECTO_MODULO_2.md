@@ -6,8 +6,8 @@
 - **Institución / Bootcamp**: Duoc UC / Alkemy
 - **Módulo**: #2 - Fundamentos del desarrollo Front-end
 - **Fecha de Entrega**: Septiembre 2026
-- **Enlace al Repositorio de GitHub**: `https://github.com/TU-USUARIO/alke-wallet` *(reemplazar con tu enlace)*
-- **Demostración en Vivo (GitHub Pages)**: `https://TU-USUARIO.github.io/alke-wallet/`
+- **Enlace al Repositorio de GitHub**: https://github.com/SebastianSanchez2023/alke-wallet
+- **Demostración en Vivo (GitHub Pages)**: https://SebastianSanchez2023.github.io/alke-wallet/
 
 ---
 
