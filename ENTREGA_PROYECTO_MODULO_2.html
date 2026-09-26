@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Entrega Proyecto Módulo 2 - Alke Wallet</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 1.6;
+      color: #1e293b;
+      margin: 40px;
+    }
+    h1 {
+      color: #0f172a;
+      border-bottom: 2px solid #0d6efd;
+      padding-bottom: 8px;
+      font-size: 24px;
+    }
+    h2 {
+      color: #1e40af;
+      font-size: 18px;
+      margin-top: 25px;
+    }
+    h3 {
+      font-size: 16px;
+      color: #334155;
+    }
+    .info-card {
+      background: #f8fafc;
+      border-left: 4px solid #0d6efd;
+      padding: 15px 20px;
+      margin-bottom: 25px;
+      border-radius: 4px;
+    }
+    .info-card p {
+      margin: 4px 0;
+    }
+    a {
+      color: #0d6efd;
+      text-decoration: none;
+      font-weight: 600;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+      font-size: 14px;
+    }
+    th, td {
+      border: 1px solid #cbd5e1;
+      padding: 10px 12px;
+      text-align: left;
+    }
+    th {
+      background-color: #f1f5f9;
+      color: #334155;
+      font-weight: 600;
+    }
+    code {
+      background-color: #f1f5f9;
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: Consolas, monospace;
+      font-size: 13px;
+    }
+    .badge {
+      background: #e0f2fe;
+      color: #0369a1;
+      padding: 3px 8px;
+      border-radius: 12px;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .footer {
+      margin-top: 40px;
+      border-top: 1px solid #e2e8f0;
+      padding-top: 15px;
+      font-size: 12px;
+      color: #64748b;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>INFORME DE EVALUACIÓN | MÓDULO #2 (ABP)</h1>
+  <p><strong>Proyecto: Alke Wallet — Fundamentos del desarrollo Front-end</strong></p>
+
+  <div class="info-card">
+    <p><strong>Estudiante:</strong> Sebastián Rodrigo Sánchez Aguilar</p>
+    <p><strong>Correo Institucional / Git:</strong> se.sancheza@duocuc.cl</p>
+    <p><strong>Institución:</strong> Duoc UC / Alkemy</p>
+    <p><strong>Módulo Evaluado:</strong> Módulo #2 - Fundamentos del desarrollo Front-end</p>
+    <p><strong>Repositorio Oficial en GitHub:</strong> <a href="https://github.com/SebastianSanchez2023/alke-wallet" target="_blank">https://github.com/SebastianSanchez2023/alke-wallet</a></p>
+    <p><strong>Demostración en Vivo (GitHub Pages):</strong> <a href="https://SebastianSanchez2023.github.io/alke-wallet/" target="_blank">https://SebastianSanchez2023.github.io/alke-wallet/</a></p>
+  </div>
+
+  <h2>1. Resumen de la Solución</h2>
+  <p>
+    Se ha diseñado e implementado la solución de Front-end para la billetera digital <strong>Alke Wallet</strong>, respondiendo a la necesidad de brindar a los usuarios una alternativa segura, intuitiva y moderna para administrar activos financieros digitales. La plataforma permite la gestión integral del saldo, transferencias inmediatas a contactos agendados, depósitos y retiros de fondos, y auditoría detallada de movimientos.
+  </p>
+
+  <h2>2. Fundamentación Técnica y Arquitectura</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Área</th>
+        <th>Tecnología</th>
+        <th>Decisiones y Justificación Técnica</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Estructura</strong></td>
+        <td>HTML5 Semántico</td>
+        <td>Uso estricto de etiquetas <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;form&gt;</code> y <code>&lt;footer&gt;</code> para asegurar accesibilidad y organización.</td>
+      </tr>
+      <tr>
+        <td><strong>Diseño y UI</strong></td>
+        <td>Bootstrap 5.3.3 + CSS3</td>
+        <td>Diseño 100% responsivo adaptable a celulares y escritorios, rejilla de 12 columnas, paleta fintech corporativa, degradados y tipografía <em>Inter</em>.</td>
+      </tr>
+      <tr>
+        <td><strong>Interactividad</strong></td>
+        <td>jQuery 3.7.1</td>
+        <td>Manipulación dinámica del DOM, autocompletado en vivo en la búsqueda de contactos, animaciones de retroalimentación (<code>slideDown</code>, <code>fadeIn</code>) y modales.</td>
+      </tr>
+      <tr>
+        <td><strong>Persistencia</strong></td>
+        <td>JavaScript ES6 + LocalStorage</td>
+        <td>Sincronización reactiva del saldo disponible, agenda de contactos e historial de transacciones en todas las vistas sin necesidad de recarga forzada.</td>
+      </tr>
+      <tr>
+        <td><strong>Control de Versiones</strong></td>
+        <td>Git & GitHub</td>
+        <td>Estructura de ramas según consigna: <code>main</code>, <code>feature/login</code>, <code>feature/transacciones</code> y <code>feature/depositos</code>.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <h2>3. Vistas y Pantallas Desarrolladas</h2>
+  <ul>
+    <li><strong><code>index.html</code></strong>: Landing page de bienvenida con presentación de la fintech y vista previa interactiva.</li>
+    <li><strong><code>login.html</code> & <code>register.html</code></strong>: Flujo de inicio de sesión y registro de cuenta con validaciones de credenciales en tiempo real.</li>
+    <li><strong><code>menu.html</code></strong>: Panel financiero (Dashboard) con saldo en tiempo real, accesos rápidos y código QR de cobro.</li>
+    <li><strong><code>deposit.html</code></strong>: Administración de fondos con pestañas interactivas para depósitos y retiros bancarios a cuentas externas.</li>
+    <li><strong><code>sendmoney.html</code></strong>: Transferencias con autocompletado predictivo en la búsqueda de contactos y modal para nuevos destinatarios.</li>
+    <li><strong><code>transactions.html</code></strong>: Historial completo de movimientos con filtros (Todos / Ingresos / Egresos), buscador en vivo y badges de estado.</li>
+  </ul>
+
+  <h2>4. Credenciales de Demostración</h2>
+  <div class="info-card">
+    <p><strong>Usuario Demo:</strong> <code>seba@alkewallet.com</code></p>
+    <p><strong>Contraseña:</strong> <code>123456</code></p>
+    <p><strong>Saldo Inicial de Prueba:</strong> <code>$1.450.000 CLP</code></p>
+  </div>
+
+  <div class="footer">
+    Evaluación Integradora ABP • Módulo #2 Front-End • Duoc UC / Alkemy • 2026
+  </div>
+
+</body>
+</html>
