@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mi Billetera - Alke Wallet</title>
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Fintech Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Responsive Navbar con Bootstrap -->
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-white bg-white border-bottom py-3 shadow-sm sticky-top">
+      <div class="container">
+        <a class="navbar-brand navbar-brand-custom" href="menu.html">
+          <span class="brand-icon-badge"><i class="bi bi-wallet2"></i></span>
+          <span>Alke Wallet</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#userNavbar" aria-controls="userNavbar" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="userNavbar">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-3">
+            <li class="nav-item">
+              <a class="nav-link active fw-bold" href="menu.html"><i class="bi bi-grid-1x2-fill me-1"></i> Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="deposit.html"><i class="bi bi-plus-circle me-1"></i> Depositar</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="sendmoney.html"><i class="bi bi-send me-1"></i> Enviar Dinero</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="transactions.html"><i class="bi bi-clock-history me-1"></i> Movimientos</a>
+            </li>
+          </ul>
+
+          <!-- Perfil de usuario y Logout -->
+          <div class="d-flex align-items-center gap-3">
+            <div class="d-none d-sm-block text-end">
+              <div class="fw-bold small text-dark">Sebastián Silva</div>
+              <div class="text-muted small">seba@alkewallet.com</div>
+            </div>
+            <div class="dropdown">
+              <button class="btn btn-light rounded-circle p-2 border" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="bi bi-person-fill text-primary fs-5"></i>
+              </button>
+              <ul class="dropdown-menu dropdown-menu-end shadow-sm">
+                <li><h6 class="dropdown-header">Cuenta Personal</h6></li>
+                <li><a class="dropdown-item small" href="menu.html"><i class="bi bi-person me-2"></i>Mi Perfil</a></li>
+                <li><a class="dropdown-item small" href="transactions.html"><i class="bi bi-journal-text me-2"></i>Historial Completo</a></li>
+                <li><hr class="dropdown-divider"></li>
+                <li>
+                  <button class="dropdown-item small text-danger btn-logout">
+                    <i class="bi bi-box-arrow-right me-2"></i>Cerrar Sesión
+                  </button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Contenido Principal -->
+  <main class="container py-4 flex-grow-1">
+
+    <!-- Fila de Saludo y Resumen Rápido -->
+    <div class="d-flex flex-column flex-md-row justify-content-between align-items-start align-items-md-center gap-3 mb-4">
+      <div>
+        <h2 class="fw-bold mb-1">¡Hola, Sebastián! 👋</h2>
+        <p class="text-muted mb-0 small">Bienvenido a tu panel financiero interactivo en Alke Wallet.</p>
+      </div>
+      <div class="d-flex gap-2">
+        <a href="deposit.html" class="btn btn-primary px-3 py-2 rounded-pill fw-semibold shadow-sm">
+          <i class="bi bi-plus-lg me-1"></i>Ingresar Fondos
+        </a>
+        <a href="sendmoney.html" class="btn btn-outline-primary px-3 py-2 rounded-pill fw-semibold">
+          <i class="bi bi-arrow-right-short me-1"></i>Transferir
+        </a>
+      </div>
+    </div>
+
+    <!-- Tarjetas de Resumen Financiero con Bootstrap Grid -->
+    <div class="row g-4 mb-4">
+      <!-- Tarjeta Principal de Saldo -->
+      <div class="col-lg-7">
+        <div class="wallet-card balance-card p-4 p-md-5 h-100 d-flex flex-column justify-content-between">
+          <div>
+            <div class="d-flex justify-content-between align-items-center mb-2">
+              <span class="text-white-50 text-uppercase small fw-bold tracking-wider">Saldo Total Disponible</span>
+              <span class="badge bg-light text-dark px-3 py-1 rounded-pill small fw-semibold">Cuenta Vista</span>
+            </div>
+            <div class="balance-amount mb-3" data-wallet-balance>$1.450.000</div>
+          </div>
+
+          <div>
+            <div class="row g-3 pt-3 border-top border-white border-opacity-25 text-white">
+              <div class="col-sm-6">
+                <small class="text-white-50 d-block">Número de Cuenta</small>
+                <span class="fw-semibold">CL93-0182-9921-0021</span>
+              </div>
+              <div class="col-sm-6 text-sm-end">
+                <small class="text-white-50 d-block">Límite Diario Transferencias</small>
+                <span class="fw-semibold">$5.000.000 CLP</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tarjeta Resumen Entradas y Salidas -->
+      <div class="col-lg-5">
+        <div class="row g-3 h-100">
+          <div class="col-12">
+            <div class="wallet-card p-4 h-100 d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div class="action-icon deposit mb-0">
+                  <i class="bi bi-arrow-down-left"></i>
+                </div>
+                <div>
+                  <small class="text-muted d-block fw-semibold">Ingresos este mes</small>
+                  <h4 class="mb-0 fw-bold text-success">+$1.495.000</h4>
+                </div>
+              </div>
+              <span class="badge bg-success-subtle text-success border border-success-subtle rounded-pill">+18%</span>
+            </div>
+          </div>
+
+          <div class="col-12">
+            <div class="wallet-card p-4 h-100 d-flex align-items-center justify-content-between">
+              <div class="d-flex align-items-center gap-3">
+                <div class="action-icon send mb-0" style="background:#fee2e2; color:#ef4444;">
+                  <i class="bi bi-arrow-up-right"></i>
+                </div>
+                <div>
+                  <small class="text-muted d-block fw-semibold">Egresos este mes</small>
+                  <h4 class="mb-0 fw-bold text-danger">-$130.000</h4>
+                </div>
+              </div>
+              <span class="badge bg-danger-subtle text-danger border border-danger-subtle rounded-pill">-5%</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Accesos Rápidos de Navegación -->
+    <h5 class="fw-bold mb-3">Acciones Frecuentes</h5>
+    <div class="row g-3 mb-5">
+      <div class="col-6 col-md-3">
+        <a href="deposit.html" class="action-btn h-100">
+          <div class="action-icon deposit">
+            <i class="bi bi-wallet2"></i>
+          </div>
+          <span class="fw-semibold">Cargar Saldo</span>
+          <small class="text-muted">Depósito bancario</small>
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="sendmoney.html" class="action-btn h-100">
+          <div class="action-icon send">
+            <i class="bi bi-send"></i>
+          </div>
+          <span class="fw-semibold">Transferir</span>
+          <small class="text-muted">A contactos</small>
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="transactions.html" class="action-btn h-100">
+          <div class="action-icon history">
+            <i class="bi bi-receipt-cutoff"></i>
+          </div>
+          <span class="fw-semibold">Movimientos</span>
+          <small class="text-muted">Historial y filtros</small>
+        </a>
+      </div>
+      <div class="col-6 col-md-3">
+        <a href="#" class="action-btn h-100" data-bs-toggle="modal" data-bs-target="#infoModal">
+          <div class="action-icon" style="background: #e0f2fe; color: #0284c7;">
+            <i class="bi bi-qr-code-scan"></i>
+          </div>
+          <span class="fw-semibold">Cobro con QR</span>
+          <small class="text-muted">Simular cobro</small>
+        </a>
+      </div>
+    </div>
+
+    <!-- Sección de Últimos Movimientos Dinámicos -->
+    <div class="wallet-card p-4 mb-4">
+      <div class="d-flex justify-content-between align-items-center mb-3">
+        <div>
+          <h5 class="fw-bold mb-1">Últimos Movimientos</h5>
+          <p class="text-muted small mb-0">Tus transacciones más recientes procesadas en tiempo real</p>
+        </div>
+        <a href="transactions.html" class="btn btn-sm btn-outline-primary rounded-pill">
+          Ver todos los movimientos <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+
+      <!-- Contenedor renderizado dinámicamente con jQuery -->
+      <div id="menuRecentTransactions" class="mt-3">
+        <!-- Cargado por app.js -->
+      </div>
+    </div>
+
+  </main>
+
+  <!-- Modal Bootstrap Informativo (Cobro QR) -->
+  <div class="modal fade" id="infoModal" tabindex="-1" aria-labelledby="infoModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content border-0 shadow">
+        <div class="modal-header border-bottom-0">
+          <h5 class="modal-title fw-bold" id="infoModalLabel"><i class="bi bi-qr-code text-primary me-2"></i>Código QR de Cobro</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body text-center py-4">
+          <div class="bg-light p-4 rounded-4 d-inline-block border mb-3">
+            <i class="bi bi-qr-code fs-1 text-dark" style="font-size: 8rem !important;"></i>
+          </div>
+          <h6 class="fw-bold">Escanea para pagar a Sebastián Silva</h6>
+          <p class="text-muted small mb-0">Cuenta: CL93-0182-9921-0021 (Alke Wallet Pay)</p>
+        </div>
+        <div class="modal-footer border-top-0 justify-content-center">
+          <button type="button" class="btn btn-secondary px-4 rounded-pill" data-bs-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="py-3 bg-white border-top text-center text-muted small">
+    <div class="container d-flex flex-column flex-sm-row justify-content-between align-items-center gap-2">
+      <div>Alke Wallet © 2026 • Evaluación Módulo #2 Front-End</div>
+      <button class="btn btn-link btn-sm text-decoration-none btn-reset-demo text-muted">
+        <i class="bi bi-arrow-clockwise me-1"></i>Restaurar datos demo
+      </button>
+    </div>
+  </footer>
+
+  <!-- Scripts: jQuery, Bootstrap Bundle, State & App Controller -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/wallet-state.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

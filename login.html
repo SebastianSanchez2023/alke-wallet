@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Iniciar Sesión - Alke Wallet</title>
+  <!-- Google Fonts Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap Icons -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <!-- Custom Fintech Styles -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+  <!-- Navbar Simple -->
+  <header>
+    <nav class="navbar navbar-light bg-white border-bottom py-3">
+      <div class="container justify-content-between">
+        <a class="navbar-brand navbar-brand-custom" href="index.html">
+          <span class="brand-icon-badge"><i class="bi bi-wallet2"></i></span>
+          <span>Alke Wallet</span>
+        </a>
+        <a href="index.html" class="btn btn-sm btn-outline-secondary rounded-pill">
+          <i class="bi bi-house-door me-1"></i>Volver al Inicio
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Login Main Section -->
+  <main class="auth-wrapper flex-grow-1">
+    <div class="auth-card p-4 p-md-5">
+      <div class="text-center mb-4">
+        <div class="brand-icon-badge mx-auto mb-3" style="width: 52px; height: 52px; font-size: 1.5rem;">
+          <i class="bi bi-person-lock"></i>
+        </div>
+        <h2 class="fw-bold mb-1">Bienvenido a Alke Wallet</h2>
+        <p class="text-muted small">Ingresa tus credenciales para acceder a tu billetera</p>
+      </div>
+
+      <!-- Alerta dinámica con jQuery -->
+      <div id="loginAlert" class="alert d-none small py-2 px-3 mb-3" role="alert"></div>
+
+      <!-- Tarjeta informativa de acceso demo -->
+      <div class="alert alert-primary-subtle border border-primary-subtle rounded-3 small p-2 mb-3">
+        <div class="d-flex align-items-center gap-2">
+          <i class="bi bi-info-circle-fill text-primary"></i>
+          <div>
+            <strong>Credenciales Demo:</strong><br>
+            <span class="text-muted">Correo:</span> <code>seba@alkewallet.com</code> | <span class="text-muted">Pass:</span> <code>123456</code>
+          </div>
+        </div>
+      </div>
+
+      <!-- Formulario con validaciones Bootstrap y jQuery -->
+      <form id="loginForm" novalidate>
+        <div class="mb-3">
+          <label for="loginEmail" class="form-label fw-semibold small text-secondary">Correo Electrónico</label>
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-envelope"></i></span>
+            <input type="email" class="form-control border-start-0 ps-0" id="loginEmail" placeholder="ejemplo@correo.com" value="seba@alkewallet.com" required>
+          </div>
+        </div>
+
+        <div class="mb-3">
+          <div class="d-flex justify-content-between align-items-center">
+            <label for="loginPassword" class="form-label fw-semibold small text-secondary mb-1">Contraseña</label>
+            <a href="#" class="small text-decoration-none text-muted" onclick="alert('En el modo demo cualquier contraseña con 6+ caracteres funciona.'); return false;">¿Olvidaste tu contraseña?</a>
+          </div>
+          <div class="input-group">
+            <span class="input-group-text bg-white border-end-0 text-muted"><i class="bi bi-key"></i></span>
+            <input type="password" class="form-control border-start-0 ps-0" id="loginPassword" placeholder="••••••••" value="123456" required minlength="6">
+          </div>
+          <div class="form-text small">Debe contener al menos 6 caracteres.</div>
+        </div>
+
+        <div class="mb-4 form-check">
+          <input type="checkbox" class="form-check-input" id="rememberMe" checked>
+          <label class="form-check-label small text-secondary" for="rememberMe">Recordar mis datos en este equipo</label>
+        </div>
+
+        <button type="submit" class="btn btn-primary w-100 py-2 rounded-3 fw-bold shadow-sm">
+          <i class="bi bi-box-arrow-in-right me-1"></i>Ingresar a mi cuenta
+        </button>
+      </form>
+
+      <div class="text-center mt-4 pt-3 border-top">
+        <span class="text-muted small">¿No tienes una cuenta aún?</span>
+        <a href="register.html" class="fw-semibold text-decoration-none small ms-1 text-primary">Crear cuenta nueva</a>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="py-3 bg-white border-top text-center text-muted small">
+    <div class="container">
+      Alke Wallet © 2026 • Evaluación Módulo #2 Front-End
+    </div>
+  </footer>
+
+  <!-- Scripts: jQuery, Bootstrap Bundle, State & App Controller -->
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/wallet-state.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
