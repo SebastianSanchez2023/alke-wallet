@@ -111,4 +111,4 @@ git push origin feature/depositos
 ## 👨‍💻 Autor
 - **Estudiante**: Sebastián Sánchez
 - **Contacto / Git**: `se.sancheza@duocuc.cl`
-- **Proyecto**: Alke Wallet - Evaluación Integradora Módulo #2 Front-End (Alkemy / Duoc UC).
+- **Proyecto**: Alke Wallet - Evaluación Integradora Módulo #2 Front-End.
